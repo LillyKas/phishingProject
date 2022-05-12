@@ -30,7 +30,7 @@ export default function Signup() {
 	const handleEmail = e => setEmail(e.target.value)
 	const handleName = e => setName(e.target.value)
 	const handlePassword = e => setPassword(e.target.value)
-	const handlePoints  = e => setPoints(e.target.value)
+	
 
 	return (
 		<>
@@ -46,7 +46,7 @@ export default function Signup() {
 				<label htmlFor="name">Name: </label>
 				<input type="text" value={name} onChange={handleName} />
 
-				<input type="number" value={points} onChange={handlePoints} />
+			
 
 				<button type="submit">Sign Up</button>
 			</form>

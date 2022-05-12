@@ -1,0 +1,22 @@
+
+
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card{
+    width: 15vw;
+    height: 20vh;
+    background-color: rebeccapurple;
+    color: white;
+}
+
+.startBtn{
+    border-radius: 10rem;
+    background-color: pink;
+    border: none;
+    padding: 0.5rem;
+}
