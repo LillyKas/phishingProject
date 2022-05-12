@@ -13,6 +13,7 @@ function AuthProviderWrapper(props) {
 		localStorage.setItem('authToken', token)
 	}
 
+
 	const verifyStoredToken = () => {
 		// check local storage if there is a token
 		const storedToken = localStorage.getItem('authToken')

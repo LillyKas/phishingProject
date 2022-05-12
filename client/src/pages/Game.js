@@ -1,14 +1,23 @@
-import { Link } from 'react-router-dom'
+
 import "../style/Start.css";
+import React, { useState, useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { AuthContext } from '../context/auth'
+
 
 
 function Game() {
 
+  const { user, setUser } = useContext(AuthContext)
+ 
+
     return (
       <div>
       <div>
+  
         <h1>Start Page</h1>
-        <p>Lets go start the game!</p>
+        <p>Lets go start the game, {user.name}</p>
         </div>
         <div className="container">
             <div className="card">

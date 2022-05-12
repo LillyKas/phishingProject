@@ -12,6 +12,7 @@ import Navbar from "./pages/Navbar";
 
 function App() {
 
+
  
   return (
     <div className="App">
@@ -20,10 +21,10 @@ function App() {
         <Route path="/" element={<HomePage />}  />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/game' element={<><Navbar/><Game/></>} />
-        <Route path='/game/level1' element={<><Navbar/><Level1/></>}/>
-        <Route path='/game/level2' element={<><Navbar/><Level2/></>}/>
-        <Route path='/game/level3' element={<><Navbar/><Level3/></>}/>
+        <Route path='/game' element={<><Navbar location="/"/><Game/></>} />
+        <Route path='/game/level1' element={<><Navbar location="/game"/><Level1/></>}/>
+        <Route path='/game/level2' element={<><Navbar location="/game/level1"/><Level2/></>}/>
+        <Route path='/game/level3' element={<><Navbar location="/game/level2"/><Level3/></>}/>
         </Routes>
     </div>
   );

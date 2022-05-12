@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { AuthContext } from '../context/auth'
 
+
 export default function Login() {
 
 	const [email, setEmail] = useState('');
@@ -56,6 +57,8 @@ export default function Login() {
 
 			<h3>Don't have an account?</h3>
 			<Link to='/signup'>Signup</Link>
+			
+		
 		</>
 	)
 }

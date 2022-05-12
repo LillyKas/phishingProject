@@ -1,34 +1,37 @@
-import React from "react";
-import { Link, useLocation  } from "react-router-dom";
-import {  useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../context/auth";
+
+const Navbar = (props) => {
+  const { user, setUser } = useContext(AuthContext);
+
+  let navigate = useNavigate();
+
+  const location = useLocation();
+  let header = "Welcome to the game!";
+
+  if (location.pathname === "/game/level1") {
+    header = "Level1";
+  } else if (location.pathname === "/game/level2") {
+    header = "Level2";
+  } else if (location.pathname === "/game/level3") {
+    header = "Level3";
+  }
+
+  function goback() {
+    let path = props.location;
+    navigate(path);
+  }
 
 
-const Navbar = () => {
 
-    const [path, setPath] = useState('/game');
-    
-    const location = useLocation();
-    let header = "Welcome to the game!"
- 
-
-    if(location.pathname === "/game/level1"){
-        header = "Level1"
-    } else if(location.pathname === "/game/level2"){
-        header = "Level2"
-        setPath("/game/level1")
-    } else if(location.pathname === "/game/level3"){
-        header = "Level3"
-        setPath("/game/level2")
-    }
-  
-
-  return (
-    <div className="header">
-    <h1>{header}</h1>
-
-	  <Link className="Link" to={path}>Zurück</Link>
-    </div>
-  );
-}
+            return (
+                <div className="header">
+                <h1>{header}</h1>
+                <button onClick={() => goback()}>zurück</button>
+                <h2>{user.points}</h2>
+                </div>
+            );
+            };
 
 export default Navbar;

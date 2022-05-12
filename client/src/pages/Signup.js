@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
+
+
+
 export default function Signup() {
 
 	const [name, setName] = useState('');
@@ -46,8 +49,6 @@ export default function Signup() {
 				<label htmlFor="name">Name: </label>
 				<input type="text" value={name} onChange={handleName} />
 
-			
-
 				<button type="submit">Sign Up</button>
 			</form>
 
@@ -55,6 +56,7 @@ export default function Signup() {
 
 			<h3>Already have an account?</h3>
 			<Link to='/login'>Login</Link>
+		
 		</>
 	)
 }
