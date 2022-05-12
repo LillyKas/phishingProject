@@ -30,6 +30,7 @@ function AuthProviderWrapper(props) {
 					setIsLoggedIn(false)
 					setUser(null)
 					setIsLoading(false)
+					
 				})
 		} else {
 			// there is no token in local storage
@@ -43,7 +44,7 @@ function AuthProviderWrapper(props) {
 		// update the state
 		setIsLoggedIn(false)
 		setUser(null)
-
+    console.log("user is logging out ")
 	}
 
 	useEffect(() => {

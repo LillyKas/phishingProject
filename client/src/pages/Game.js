@@ -11,13 +11,13 @@ function Game() {
 
   const { user, setUser } = useContext(AuthContext)
  
-
+console.log(user)
     return (
       <div>
       <div>
   
         <h1>Start Page</h1>
-        <p>Lets go start the game, {user.name}</p>
+        <p>Lets go start the game, {user?.name}</p>
         </div>
         <div className="container">
             <div className="card">

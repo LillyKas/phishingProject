@@ -3,7 +3,8 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/auth";
 
 const Navbar = (props) => {
-  const { user, setUser } = useContext(AuthContext);
+  const { user  } = useContext(AuthContext);
+console.log(user)
 
   let navigate = useNavigate();
 
@@ -29,7 +30,7 @@ const Navbar = (props) => {
                 <div className="header">
                 <h1>{header}</h1>
                 <button onClick={() => goback()}>zurück</button>
-                <h2>{user.points}</h2>
+                <h2>{user?.points}</h2>
                 </div>
             );
             };
