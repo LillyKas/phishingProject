@@ -1,16 +1,20 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/auth";
+import axios from "axios";
+import "../style/Navbar.css";
+
 
 const Navbar = (props) => {
   const { user} = useContext(AuthContext);
-
-
+  const [points, setPoints] = useState(0);
+  const token = localStorage.authToken;
+  const id = user._id;
   let navigate = useNavigate();
-
   const location = useLocation();
   let header = "Welcome to the game!";
-  const [count, setCount] = useState(0);
+  const [countTask, setTaskCount] = useState(0);
+ 
 
   if (location.pathname === "/game/level1") {
     header = "Level1";
@@ -24,18 +28,21 @@ const Navbar = (props) => {
 
   function goback() {
     let path = props.location;
-    setCount(0)
+    setTaskCount(0)
     navigate(path);
   }
 
 
 
-            return (
-                <div className="header">
-                <h1>{header}</h1>
-                <button onClick={() => goback()}>zurück</button>
-                <h2>{user?.points}</h2>
-                </div>
+
+
+      return (
+        <div className="header">
+     
+        <button onClick={() => goback()}>zurück</button>
+        <h1>{header}</h1>
+        <p>Your points: {points}</p>
+        </div>
             );
             };
 
