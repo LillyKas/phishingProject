@@ -9,15 +9,15 @@ import { AuthContext } from '../context/auth'
 
 function Game() {
 
-  const { user, setUser } = useContext(AuthContext)
+  const { user, logoutUser  } = useContext(AuthContext)
  
-console.log(user)
     return (
       <div>
       <div>
   
         <h1>Start Page</h1>
         <p>Lets go start the game, {user?.name}</p>
+        <button onClick={logoutUser}>logout</button>
         </div>
         <div className="container">
             <div className="card">

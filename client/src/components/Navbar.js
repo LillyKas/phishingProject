@@ -3,8 +3,8 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/auth";
 
 const Navbar = (props) => {
-  const { user  } = useContext(AuthContext);
-console.log(user)
+  const { user} = useContext(AuthContext);
+
 
   let navigate = useNavigate();
 

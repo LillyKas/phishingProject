@@ -44,7 +44,6 @@ function AuthProviderWrapper(props) {
 		// update the state
 		setIsLoggedIn(false)
 		setUser(null)
-    console.log("user is logging out ")
 	}
 
 	useEffect(() => {
