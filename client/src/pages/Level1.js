@@ -84,11 +84,11 @@ function Level1() {
         setPoints(points);
         verifyStoredToken()
         navigate("/game/level2");
+
       })
       .catch((err) => console.log(err.response.data));
   };
 
-  console.log(user)
   return (
     <div>
       <div className="container-level1">

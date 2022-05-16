@@ -3,7 +3,7 @@ const User = require('../models/User.model')
 
 
 // get a specific user
-router.get('/level1', (req, res, next) => {
+router.get('/:id', (req, res, next) => {
   User.findById(req.params.id)
     .then(user => {
       res.status(200).json(user)

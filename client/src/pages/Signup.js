@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import "../style/Authentication.css";
 
 
 
@@ -36,7 +37,8 @@ export default function Signup() {
 	
 
 	return (
-		<>
+		<div className='authentication'>
+		<div className='container-data'>
 			<h1>Signup</h1>
 			<form onSubmit={handleSubmit}>
 
@@ -56,7 +58,7 @@ export default function Signup() {
 
 			<h3>Already have an account?</h3>
 			<Link to='/login'>Login</Link>
-		
-		</>
+			</div>
+			</div>
 	)
 }

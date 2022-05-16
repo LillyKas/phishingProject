@@ -1,22 +1,23 @@
 import { Link } from 'react-router-dom'
 import "../App.css";
-import { AuthContext } from '../context/auth'
-import React, { useState, useContext } from 'react'
+
+const  HomePage = () =>  {
 
 
-const  HomePage = props =>  {
-
-  const { user } = useContext(AuthContext)
-console.log(user , "lalalal")
   return (
-    <div>
-      <h1>Home Page</h1>
-   
+    <div className='homepage'>
+    <div className='container-left'>
+    <div className="pictureHomePage"></div>
+    <div className="pictureHomePageKnight"></div>
+    </div>
+    <div className='container-right'>
+      <h1>Welcome to Sir Firewall</h1>
+   <div className='link-container'>
       <Link to='/signup'>Signup</Link>
       <Link to='/login'>Login</Link>
-      <Link to='/game'>Start The Game</Link>
+      </div>
     </div>
-    
+    </div>
   );
 }
 

@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../context/auth";
 import axios from "axios";
 import "../style/Navbar.css";
@@ -33,7 +33,18 @@ const Navbar = (props) => {
   }
 
 
+  const getUser = () => {
+		axios.get(`http://localhost:5005/api/game/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+			.then(user => {
+				console.log(user.data.points)
+        setPoints(user.data.points)
+			})
+			.catch(err => console.log(err))
+	}
 
+	useEffect(() => {
+		getUser()
+	}, [])
 
 
       return (

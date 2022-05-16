@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+/* 
+
+.homepage{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3A077A;
+  font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 800;
+font-size: 22px;
+color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ .pictureHomePage{
+  width: 5em;
+  height: 6em;
+  background-image: url("./style/castle1.png");
+  background-size: cover;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pictureHomePageKnight{
+  width: 3em;
+  height: 4em;
+  margin: -2em 3em 0em 0em;
+  background-image: url("./style/knight.gif");
+  background-size: cover;
 }
+ 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-left{
+  height: 100vh; 
+  width: 20vw;
+  background-color: #9d78ca99;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container-right{
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:stretch;
+  width: 80vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.link-container{
+  display: flex;
+  width: 40vw;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.link-container a{
+text-decoration: none;
+width: 10vw;
+color: #3A077A;
+padding: 0.5rem;
+background-color: #F2F2F2;
+border-radius: 5rem;
+margin: 0.2rem;
+font-weight: bold;
+font-size: 1.2rem;
+text-align: center;
+}
+
+
+
+
+ */

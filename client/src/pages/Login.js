@@ -27,7 +27,7 @@ export default function Login() {
 				verifyStoredToken()
 					.then(() => {
 						// redirect to projects
-						navigate('/')
+						navigate('/game')
 					})
 			})
 			.catch(err => {
