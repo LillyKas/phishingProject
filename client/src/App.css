@@ -1,4 +1,4 @@
-/* 
+
 
 .homepage{
   display: flex;
@@ -42,7 +42,7 @@ color: white;
   display: flex;
   flex-direction: column;
   justify-content:center;
-  align-items:stretch;
+  align-items:center;
   width: 80vw;
 }
 
@@ -69,5 +69,3 @@ text-align: center;
 
 
 
-
- */

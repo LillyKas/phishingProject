@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { AuthContext } from '../context/auth'
+import "../style/Authentication.css";
 
 
 export default function Login() {
@@ -40,9 +41,11 @@ export default function Login() {
 	const handlePassword = e => setPassword(e.target.value)
 
 	return (
-		<>
+		<div className="authentication">
+				<div className="container-data">
 			<h1>Login</h1>
-			<form onSubmit={handleSubmit}>
+	
+			<form onSubmit={handleSubmit} className="form-container">
 
 				<label htmlFor="email">Email: </label>
 				<input type="text" value={email} onChange={handleEmail} />
@@ -50,7 +53,7 @@ export default function Login() {
 				<label htmlFor="password">Password: </label>
 				<input type="password" value={password} onChange={handlePassword} />
 
-				<button type="submit">Log In</button>
+				<button type="submit" className="btn-submit">Log In</button>
 			</form>
 
 			{errorMessage && <h5>{errorMessage}</h5>}
@@ -58,7 +61,7 @@ export default function Login() {
 			<h3>Don't have an account?</h3>
 			<Link to='/signup'>Signup</Link>
 			
-		
-		</>
+			</div>
+	</div>
 	)
 }

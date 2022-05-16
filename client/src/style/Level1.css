@@ -1,4 +1,4 @@
-/* .container-level1{
+ .container-level1{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -11,4 +11,4 @@
     height: 40vh;
     background-image: url("./level1-email.png");
     background-size: cover;
-} */
+} 

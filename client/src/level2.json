@@ -1,0 +1,26 @@
+[ {
+    "option1": "Anhang .exe",
+    "option2": "Anhang .pdf",
+    "correctOption": "option1"
+},
+{
+    "option1": "no link",
+    "option2": "link",
+    "correctOption": "option2"
+},
+{
+    "option1": "no call of action",
+    "option2": "call of action",
+    "correctOption": "option2"
+},
+{
+    "option1": "content",
+    "option2": "timing",
+    "correctOption": "option1"
+},
+{
+    "option1": "Hello *your name*",
+    "option2": "Good day",
+    "correctOption": "option2"
+}
+]
