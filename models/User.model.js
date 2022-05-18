@@ -9,7 +9,10 @@ const userSchema = new Schema(
     },
     password: String,
     email: String,
-    points: Number
+    pointsTotal: Number,
+    pointsLevel1: Number,
+    pointsLevel2: Number,
+    pointsLevel3: Number,
   },
  
   {

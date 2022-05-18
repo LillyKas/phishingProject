@@ -8,6 +8,7 @@ import Level1 from "./pages/Level1";
 import Level2 from "./pages/Level2";
 import Level3 from "./pages/Level3";
 import Navbar from "./components/Navbar";
+import Leaderboard from "./pages/Leaderboard";
 
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/game/level1' element={<ProtectedRoute redirectTo='/login'><><Navbar location="/game"/><Level1/></></ProtectedRoute>}/>
         <Route path='/game/level2' element={<ProtectedRoute redirectTo='/login'><><Navbar location="/game/level1"/><Level2/></></ProtectedRoute>}/>
         <Route path='/game/level3' element={<ProtectedRoute redirectTo='/login'><><Navbar location="/game/level2"/><Level3/></></ProtectedRoute>}/>
+        <Route path='/game/leaderboard' element={<ProtectedRoute redirectTo='/leaderboard'><><Navbar location="/game/level3"/><Leaderboard/></></ProtectedRoute>}/>
         </Routes>
     </div>
   );

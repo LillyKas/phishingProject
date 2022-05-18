@@ -5,7 +5,7 @@ const { isAuthenticated } = require('../middleware/jwt.middleware')
 const User = require('../models/User.model')
 
 router.post('/signup', (req, res, next) => {
-	const { email, password, name, points } = req.body
+	const { email, password, name, pointsTotal, pointsLevel1, pointsLevel2, pointsLevel3 } = req.body
 	console.log("backend: ", req.body)
 	// check if email or name or password are empty
 	if (email === '' || password === '' || name === '') {
@@ -28,10 +28,10 @@ router.post('/signup', (req, res, next) => {
 			const salt = bcrypt.genSaltSync();
 			const hashedPassword = bcrypt.hashSync(password, salt)
 			// create the new user
-			return User.create({ email, password: hashedPassword, name, points })
+			return User.create({ email, password: hashedPassword, name, pointsTotal, pointsLevel1, pointsLevel2, pointsLevel3 })
 				.then(createdUser => {
 					const { email, name, _id } = createdUser
-					const user = { email, name, _id, points }
+					const user = { email, name, _id, pointsTotal, pointsLevel1, pointsLevel2, pointsLevel3 }
 					console.log("user", user)
 					res.status(201).json({ user: user })
 				})
@@ -56,8 +56,8 @@ router.post('/login', (req, res, next) => {
 			}
 			const passwordCorrect = bcrypt.compareSync(password, foundUser.password)
 			if (passwordCorrect) {
-				const { _id, email, name, points } = foundUser
-				const payload = { _id, email, name, points }
+				const { _id, email, name, pointsTotal, pointsLevel1, pointsLevel2, pointsLevel3  } = foundUser
+				const payload = { _id, email, name, pointsTotal, pointsLevel1, pointsLevel2, pointsLevel3 }
 				// create the json web token
 				const authToken = jwt.sign(
 					payload,

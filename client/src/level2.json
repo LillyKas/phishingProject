@@ -1,26 +1,26 @@
 [ {
-    "option1": "Anhang .exe",
-    "option2": "Anhang .pdf",
+    "option1": "./../pictures/level2/dragon0_option1.png",
+    "option2": "./../pictures/level2/dragon0_option2.png",
     "correctOption": "option1"
 },
 {
-    "option1": "no link",
-    "option2": "link",
+    "option1": "./../pictures/level2/dragon1_option1.png",
+    "option2": "./../pictures/level2/dragon1_option2.png",
     "correctOption": "option2"
 },
 {
-    "option1": "no call of action",
-    "option2": "call of action",
+    "option1": "./../pictures/level2/dragon2_option1.png",
+    "option2": "./../pictures/level2/dragon2_option2.png",
     "correctOption": "option2"
 },
 {
-    "option1": "content",
-    "option2": "timing",
+    "option1": "./../pictures/level2/dragon3_option1.png",
+    "option2": "./../pictures/level2/dragon3_option2.png",
     "correctOption": "option1"
 },
 {
-    "option1": "Hello *your name*",
-    "option2": "Good day",
+    "option1": "./../pictures/level2/dragon4_option1.png",
+    "option2": "./../pictures/level2/dragon4_option2.png",
     "correctOption": "option2"
 }
 ]

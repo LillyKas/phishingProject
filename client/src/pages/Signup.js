@@ -7,14 +7,17 @@ export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [points, setPoints] = useState(0);
+  const [pointsTotal, setpointsTotal] = useState(0);
+  const [pointsLevel1, setpointsLevel1] = useState(0);
+  const [pointsLevel2, setpointsLevel2] = useState(0);
+  const [pointsLevel3, setpointsLevel3] = useState(0);
   const [errorMessage, setErrorMessage] = useState(undefined);
 
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const requestBody = { email, password, name, points };
+    const requestBody = { email, password, name, pointsTotal, pointsLevel1, pointsLevel2, pointsLevel3 };
     console.log(requestBody);
     axios
       .post("/api/auth/signup", requestBody)
@@ -34,7 +37,7 @@ export default function Signup() {
 
 
   const style = {
-	 " text-decoration": "none"
+	 " textDecoration": "none"
   }
 
   return (

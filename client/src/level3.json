@@ -1,0 +1,31 @@
+[ {
+    "pictureURL":  "./../pictures/level3/volksbank-email.png",
+    "phishingYes": true,
+    "phishingNot": false
+},
+{
+    "pictureURL":  "./../pictures/level3/amazon-email.png",
+    "phishingYes": true,
+    "phishingNot": false
+},
+{
+    "pictureURL":  "./../pictures/level3/kabeleins-email.png",
+    "phishingYes": false,
+    "phishingNot": true
+},
+{
+    "pictureURL":  "./../pictures/level3/paypal-email.png",
+    "phishingYes": true,
+    "phishingNot": false
+},
+{
+    "pictureURL":  "./../pictures/level3/swapfiets-email.png",
+    "phishingYes": false,
+    "phishingNot": true
+},
+{
+    "pictureURL":  "./../pictures/level3/swapfiets-email.png",
+    "phishingYes": false,
+    "phishingNot": true
+}
+]

@@ -24,6 +24,8 @@ const Navbar = (props) => {
 
   } else if (location.pathname === "/game/level3") {
     header = "Level3";
+  } else if (location.pathname === "/game/leaderboard") {
+    header = "Leaderboard";
   }
 
   function goback() {
@@ -36,8 +38,7 @@ const Navbar = (props) => {
   const getUser = () => {
 		axios.get(`http://localhost:5005/api/game/${id}`, { headers: { Authorization: `Bearer ${token}` } })
 			.then(user => {
-				console.log(user.data.points)
-        setPoints(user.data.points)
+        setPoints(user.data.pointsTotal)
 			})
 			.catch(err => console.log(err))
 	}
@@ -46,12 +47,15 @@ const Navbar = (props) => {
 		getUser()
 	}, [])
 
+  const toHomePage = () => {
+    navigate("/game")
+  }
 
       return (
         <div className="header">
      
         <button onClick={() => goback()}>zurück</button>
-        <h1>{header}</h1>
+        <h1 onClick={toHomePage}>{header}</h1>
         <p>Your points: {points}</p>
         </div>
             );
