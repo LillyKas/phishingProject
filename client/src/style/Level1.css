@@ -1,14 +1,95 @@
+
+ 
  .container-level1{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-image: url("./landscape.png");
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    font-style: bold;
+    font-weight: 900;
+    width: 100vw;
+    height: 100vh;
 }
 
 
 .pictureLevel1{
     width: 50vw;
-    height: 40vh;
+    height: 50vh;
     background-image: url("./level1-email.png");
     background-size: cover;
+    border-radius: 1em;
+    margin: 0em 0em 0em 10em;
+    margin-top: -10%;
 } 
+
+.taskLevel1{
+    padding: 0.5em 4em 0.5em 4em;
+    background-color: #3b077a34 ;
+    backdrop-filter: blur(6px);
+    margin-top: -5%;
+}
+
+.level1Popup{
+    padding: 2em;
+    background-color: #d48ce6;;
+    width: 40vw;
+    border-radius: 1em;
+    position: fixed;
+    top: 20;
+    left: 10;
+    z-index: 999;
+}
+
+.level1Popup button{
+    padding: 0.2em;
+}
+
+.btnLevel1-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -5em;
+}
+
+.answerBtn{
+    text-decoration: none;
+    padding: 0.5em 4em 0.5em 4em;
+    font-size: 12px;
+    background-color: #d48ce6;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    border-style: none;
+    border-radius: 1em;
+    margin: -3em 1em 0em 1em;
+}
+
+.moreInfoBtn{
+    text-decoration: none;
+    padding: 0.5em 4em 0.5em 4em;
+    font-size: 12px;
+    background-color: #6daa30;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    border-style: none;
+    border-radius: 1em;
+   margin-top: -9%;
+}
+
+.picturePoints{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picturePoints h2{
+  padding: 0em 0em 2em 3em;
+  font-size: 36px;
+}
+

@@ -1,0 +1,76 @@
+.background {
+  background-image: url("./landscape.png");
+  background-size: cover;
+  width: 100vw;
+  height: 98vh;
+  overflow: hidden;
+}
+
+.container-game h3 {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  font-weight: 900;
+  border-style: none;
+  border-radius: 1em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card {
+  background-color: #3b077a34;
+  padding: 1em;
+  width: 25vw;
+  height: 45vh;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+  font-style: normal;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  margin-top: 2em;
+  backdrop-filter: blur(6px);
+}
+
+.card p {
+  font-size: 14px;
+  margin-top: -1em;
+}
+
+.card :hover {
+  cursor: pointer;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-style: bold;
+}
+
+.startBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.linkStartBtn {
+  text-decoration: none;
+  padding: 0.5em 4em 0.5em 4em;
+  font-size: 22px;
+  background-color: #d48ce6;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  border-style: none;
+  border-radius: 1em;
+}
+
+

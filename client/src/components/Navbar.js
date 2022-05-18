@@ -6,7 +6,7 @@ import "../style/Navbar.css";
 
 
 const Navbar = (props) => {
-  const { user} = useContext(AuthContext);
+  const { user, logoutUser } = useContext(AuthContext);
   const [points, setPoints] = useState(0);
   const token = localStorage.authToken;
   const id = user._id;
@@ -17,13 +17,13 @@ const Navbar = (props) => {
  
 
   if (location.pathname === "/game/level1") {
-    header = "Level1";
+    header = "Level 1";
  
   } else if (location.pathname === "/game/level2") {
-    header = "Level2";
+    header = "Level 2";
 
   } else if (location.pathname === "/game/level3") {
-    header = "Level3";
+    header = "Level 3";
   } else if (location.pathname === "/game/leaderboard") {
     header = "Leaderboard";
   }
@@ -53,10 +53,13 @@ const Navbar = (props) => {
 
       return (
         <div className="header">
-     
-        <button onClick={() => goback()}>zurück</button>
+        <button className="backBtn" onClick={() => goback()}>go back</button>
         <h1 onClick={toHomePage}>{header}</h1>
-        <p>Your points: {points}</p>
+        <div className="userInfoNav">
+        <p> Hey, {user?.name} 🦄</p>
+        <p className="pointsDisplay"> Your points: &nbsp; {points}</p>
+        <button className="logoutBtn" onClick={logoutUser}>logout</button>
+        </div>
         </div>
             );
             };

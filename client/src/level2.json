@@ -1,26 +1,37 @@
 [ {
     "option1": "./../pictures/level2/dragon0_option1.png",
     "option2": "./../pictures/level2/dragon0_option2.png",
-    "correctOption": "option1"
+    "correctOption": "option1",
+    "infoText": "The .exe file extension may contain executable code and is therefore much more dangerous than a pdf file",
+    "infoPicture": "./../pictures/level2/info0.png"
+
 },
 {
     "option1": "./../pictures/level2/dragon1_option1.png",
     "option2": "./../pictures/level2/dragon1_option2.png",
-    "correctOption": "option2"
+    "correctOption": "option2",
+    "infoText": "Links can be found in almost every phishing e-mail, as they are redirects to malicious websites. If there are no links in the e-mail, that is good: But beware! Links can be disguised and look harmless at first sight.",
+    "infoPicture": "./../pictures/level2/info1.png"
 },
 {
     "option1": "./../pictures/level2/dragon2_option1.png",
     "option2": "./../pictures/level2/dragon2_option2.png",
-    "correctOption": "option2"
+    "correctOption": "option2",
+    "infoText": "In just about every phishing email, you will find a call in some form. The context is important. Should you click somewhere or give sensitive information? Then be careful and verify the sender!",
+    "infoPicture": "./../pictures/level2/info2.png"
 },
 {
     "option1": "./../pictures/level2/dragon3_option1.png",
     "option2": "./../pictures/level2/dragon3_option2.png",
-    "correctOption": "option1"
+    "correctOption": "option1",
+    "infoText": "The content of the e-mail is ALWAYS more important than the time. Even if an email arrives at unusual times, this is only a hint and only relevant in connection with the content of the email.",
+    "infoPicture": "./../pictures/level2/info3.png"
 },
 {
     "option1": "./../pictures/level2/dragon4_option1.png",
     "option2": "./../pictures/level2/dragon4_option2.png",
-    "correctOption": "option2"
+    "correctOption": "option2",
+    "infoText": "Here's a concrete example: Guten Tag is much more generic than using your name. However, beware: Your data may have been leaked to attackers, who then address you specifically in order to gain your trust. So always pay attention to the content and the sender.",
+    "infoPicture": "./../pictures/level2/info4.png"
 }
 ]

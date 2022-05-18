@@ -1,31 +1,51 @@
 [ {
-    "pictureURL":  "./../pictures/level3/volksbank-email.png",
+    "pictureURL":  "./../pictures/level3/paypal-email.png",
     "phishingYes": true,
-    "phishingNot": false
-},
-{
-    "pictureURL":  "./../pictures/level3/amazon-email.png",
-    "phishingYes": true,
-    "phishingNot": false
+    "phishingNot": false,
+    "infoIfTrue": "Oh shouts of joy sound throughout the castle 🎺! That was right! This email is a real phishing email. And you have defused it with this What's striking about this email are:Email address, spelling and grammar mistakes, the request, urgency",
+    "infoIfWrong": "BOOM! The castle walls tremble... You have unfortunately made the wrong choice and exposed your castle to great danger.What's striking about this email are:Email address, spelling and grammar mistakes, the request, urgency. What's striking about this email are: Email address, spelling and grammar mistakes, the request, urgency",
+    "Hint": "Striking about this email are: E-mail address, the spelling and grammar mistakes, the request, urgency. Clearly phishing!"
+
 },
 {
     "pictureURL":  "./../pictures/level3/kabeleins-email.png",
-    "phishingYes": false,
-    "phishingNot": true
-},
-{
-    "pictureURL":  "./../pictures/level3/paypal-email.png",
     "phishingYes": true,
-    "phishingNot": false
+    "phishingNot": false,
+    "infoIfTrue": "Very good! No one can fool you that easily! You have correctly classified this e-mail as harmless. Especially with the hint it is clear that this e-mail is trustworthy, because it has a correct e-mail address and you expected it. Context + content fits together. The timing of the email is NOT a characteristic of a phishing email.",
+    "infoIfWrong": "Oh my holy cannon! In fact, this is NO phishing email. Look again carefully. Especially with the note, it's clear that this email is trustworthy because it has a correct email address and you were expecting it. So context + content fits together. Nevertheless, it is better to be too careful than too little ;) Remember though: The timing of the email is NOT a characteristic of a phishing email.",
+    "Hint": "Especially with the hint it is clear that this email is trustworthy because it has a correct email address and you were expecting it. So context + content fits together. Nevertheless, it is better to be too careful than too little ;)"
+
+},
+{
+    "pictureURL":  "./../pictures/level3/amazon-email.png",
+    "phishingYes": false,
+    "phishingNot": true,
+    "infoIfTrue": "Jauchzent und Frohlocket 🎺! You have detected a real explosive charge: This e-mail is a genuine phishing e-mail. And you have defused it with this. Conspicuous about this email are: e-mail address, the spelling and grammar mistakes, the solicitation, generic and very conspicuous address.",
+    "infoIfWrong": "BOOM! One hit and the explosive device goes off, devastating everything around you. This was a phishing email. Conspicuous about this email are: e-mail address, the spelling and grammar mistakes, the solicitation, generic and very conspicuous address.",
+    "Hint": "Conspicuous about this email are: Email address, the spelling and grammatical errors, the solicitation, generic and very conspicuous address."
+},
+{
+    "pictureURL":  "./../pictures/level3/sparkasse-email.png",
+    "phishingYes": true,
+    "phishingNot": false,
+    "infoIfTrue": "Sapperlot🎺! That was right and this one was really hard!Noticeable about this email are: The subject line, the request, urgency, But above all: THE CONTEXT: There is no further information about this email. Not even that you have already approved something... Accordingly, you should be careful and contact your bank/company in case of strong uncertainty",
+    "infoIfWrong": "Boom! Die Wände zittern. Ein Sprengsatz ist hochgegangen, nachdem diese E-Mail falsch sortiert wurde. Es handelt sich hierbei in der Tat um eine Phishing E-Mail. Aufällig an dieser E-Mail sind: Die Betreffzeile, die Aufforderung, Dringlichkeit: Aber vor Allem: DER KONTEXT: Zu dieser E-Mail gibt es keine weiteren Informationen. Also auch nicht dazu, dass du bereits etwas genehmigt hättest.",
+    "Hint": "What stands out about this email is: The subject line, the request, the urgency: But most importantly: THE CONTEXT: There is no other information about this email. Not even that you have already approved something.... Accordingly, you should be careful and contact your bank/company if you are very unsure."
 },
 {
     "pictureURL":  "./../pictures/level3/swapfiets-email.png",
     "phishingYes": false,
-    "phishingNot": true
+    "phishingNot": true,
+    "infoIfTrue": "Long live our hero! You got that right! This is NOT a phishing email. In fact, this is NOT a phishing email. Again, it's the context that makes it! Once you can verify the sender + already have experience, that is one of the defining characteristics that you are NOT dealing with phishing h",
+    "infoIfWrong": "This will make the dog in the frying pan go crazy! This is actually NOT a phishing email. Again, it's the context that makes it! As soon as you can verify the sender + already have experience, this is one of the decisive characteristics that you are NOT dealing with phishing.",
+    "Hint": "This is actually NOT a phishing email. Again, it's the context that makes it! As soon as you can verify the sender + already have experience, this is one of the decisive characteristics that you are NOT dealing with phishing."
 },
 {
     "pictureURL":  "./../pictures/level3/swapfiets-email.png",
     "phishingYes": false,
-    "phishingNot": true
+    "phishingNot": true,
+    "infoIfTrue": "",
+    "infoIfWrong": "",
+    "Hint": ""
 }
 ]

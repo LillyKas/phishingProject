@@ -1,69 +1,65 @@
 [
-    {
-      "text": "Does this e-mail contain a link?",
-     "answer": true,
-     "infoIfCorrect": "Yes, that's right!This email contains a link and although it looks trustworthy, malicious code may be hiding behind it",
-     "infoIfWrong": " ☹️ Uh Oh...Your answer was not correct. There is a link in this e-mail. Look again carefully! If you need more information just click on the question",
-     "infoText": "A link connects different web pages and may also contain malicious code. Usually, the hyperlink is highlighted/underlined. Links are a common method of redirecting users to a malicious website or loading malicious code onto their computers. Links do not have to represent the actual address and thus can look more valid than they are. If you move your mouse over the link (not click!) you can see the real address."
-
-    },
-    {
-        "text": "Does this email contain a call of action?",
-       "answer": true,
-       "infoIfCorrect": "Your answer was correct! This email contains a clear request to click on the link. A common feature of phishing emails. But pay attention to the context. Not every request with a link is dangerous.",
-       "infoIfWrong": "☹️ Oh but the damsel of the castle is sorely disappointed by this answer! Your answer was not correct. A request can also take place indirectly like here by the request to set up SecureGo. Ask yourself how you feel when reading the email.",
-       "infoText": "A request can be, for example: You should click on the link, download the file or provide sensitive data. A common feature of phishing emails. However, pay attention to the context: request + pressure, e.g. phrases like: 'You have 10 hours until we close your account' or even just 'react now' should set off alarm bells."
-  
-      },
-      {
-        "text": "Does this email contain an attachment?",
-       "answer": false,
-       "infoIfCorrect": "Long live our young hero🥳 Your answer was correct! This email does not contain an attachment, although attachments are a common feature for phishing emails. Especially with the file extension .exe .docx .zip .RAR",
-       "infoIfWrong": "Oh oh ☹️ Your answer was wrong! An attachment is located either at the top or bottom of an email and is often represented as a tile or with a paper clip. ATTENTION with the following file attachments: .exe .docx .zip .RAR",
-       "infoText": "An attachment is a file within the email. Different file types are dangerous in different ways: .jpg or .pdf are safer than .exe and .docx .zip .RAR (these can contain executable code)"
-      },
-      {
-        "text": "Is it likely that they will ask for sensitive information if one clicks on the link?",
-       "answer": true,
-       "infoIfCorrect": "Your answer was correct! This e-mail indirectly contains a request to disclose sensitive information. This is clear from the context of the email: Bank details + link. It is to be expected that you should disclose sensitive information such as your online banking access data.",
-       "infoIfWrong": "Your answer was not correct. In this e-mail is indirectly the request to provide sensitive data. This is clear from the context of the email: Bank details + link. It is to be expected that you should disclose sensitive information such as your online banking access data.",
-       "infoText": "If the source cannot be clearly validated, never click on the link! The context in this example suggests that sensitive information is requested"
-      },
-      {
-        "text": "Is your bank's logo enough to verify the sender?",
-       "answer": false,
-       "infoIfCorrect": "Deine Antwort war richtig! Nur das Logo reicht definitiv nicht aus, das kann sich ja jeder aus dem Internet holen.",
-       "infoIfWrong": "Your answer was wrong. Only the logo is definitely not enough, anyone can get it from the internet",
-       "infoText": "The logo is definitely not enough to verify an email. Only the combination of context + trusted email address can be safe (but again: CAUTION)."
-      },
-      {
-        "text": "Are generic phrases used in this email?",
-       "answer": true,
-       "infoIfCorrect": "Your answer was correct! This email contains generic speech like 'Hello customer' or 'Good day' and are an indication of villainy!",
-       "infoIfWrong": "Your answer was not correct. This email contains generic speech like 'Hello customer' or 'Good day' and are an indication of villainy!",
-       "infoText": "Generic addresses often indicate that the sender has no information about you and sends a lot of these emails -> a definite alarm sign"
-      },
-      {
-        "text": "Does the email address look trustworthy?",
-       "answer": false,
-       "infoIfCorrect": "Your answer was correct! This email address is not trustworthy because it is not spelled correctly (Like sunglasses from 'RayBerry')",
-       "infoIfWrong": "Your answer was wrong! This email address is not trustworthy because it is not spelled correctly (Like sunglasses with 'RayBerry')",
-       "infoText": "The e-mail address is often the most important indicator of whether it is phishing or not. Spelling errors and/or many numbers and special characters in the e-mail address are critical. You can clearly identify an address via the e-mail header (contains the IP address that cannot be manipulated).How? Simply click on e-mail address or 'Show options' (depending on the e-mail program) Copy IP address and google - If the e-mail has already been classified as malicious, e.g. by the consumer advice center, you will find a hint on the Internet."
-      },
-      {
-        "text": "Does this email contain spelling errors?",
-       "answer": true,
-       "infoIfCorrect": "Your answer was correct! Spelling errors like here: 'Vielen Dnak' or 'mit freundlichen GreFen' can be a sign that e.g. a translation program was active: This is not a definite characteristic, but a hint",
-       "infoIfWrong": "Uiuiuiui, watch out young knight☹️ Your answer was wrong! Spelling errors like here: 'Vielen Dnak' or 'mit freundlichen GreFen' can be a sign that e.g. a translation program was active: This is not a definite characteristic, but a hint",
-       "infoText": "Spelling errors can be a sign that a translation program has been active: this is not a definite characteristic, but it is an indication"
-      },
-      {
-        "text": "Is the timing of an email relevant?",
-       "answer": true,
-       "infoIfCorrect": "Your answer was correct! The time of the e-mail is relevant. A phishing email at unusual times may indicate that this is not a valid email, especially in the context of the content.",
-       "infoIfWrong": "Aii Karamba☹️ Your answer was wrong! A phishing email at unusual times insebspecially in the context of the content may indicate that this is not a valid email.",
-       "infoText": "The time of the e-mail is relevant. A phishing email at unusual times may indicate that this is not a valid email, especially in the context of the content."
-      }
-
-
-  ]
+  {
+    "text": "Does this e-mail contain a link?",
+    "answer": true,
+    "infoIfCorrect": "Yes, that's right!This email contains a link and although it looks trustworthy, malicious code may be hiding behind it",
+    "infoIfWrong": " ☹️ Uh Oh...Your answer was not correct. There is a link in this e-mail. Look again carefully! If you need more information just click on the question",
+    "infoText": "A link connects different web pages and may also contain malicious code. Usually, the hyperlink is highlighted/underlined. Links are a common method of redirecting users to a malicious website or loading malicious code onto their computers. Links do not have to represent the actual address and thus can look more valid than they are. If you move your mouse over the link (not click!) you can see the real address."
+  },
+  {
+    "text": "Does this email contain a call of action?",
+    "answer": true,
+    "infoIfCorrect": "Your answer was correct! This email contains a clear request to click on the link. A common feature of phishing emails. But pay attention to the context. Not every request with a link is dangerous.",
+    "infoIfWrong": "☹️ Oh but the damsel of the castle is sorely disappointed by this answer! Your answer was not correct. A request can also take place indirectly like here by the request to set up SecureGo. Ask yourself how you feel when reading the email.",
+    "infoText": "A request can be, for example: You should click on the link, download the file or provide sensitive data. A common feature of phishing emails. However, pay attention to the context: request + pressure, e.g. phrases like: 'You have 10 hours until we close your account' or even just 'react now' should set off alarm bells."
+  },
+  {
+    "text": "Does this email contain an attachment?",
+    "answer": false,
+    "infoIfCorrect": "Long live our young hero🥳 Your answer was correct! This email does not contain an attachment, although attachments are a common feature for phishing emails. Especially with the file extension .exe .docx .zip .RAR",
+    "infoIfWrong": "Oh oh ☹️ Your answer was wrong! An attachment is located either at the top or bottom of an email and is often represented as a tile or with a paper clip. ATTENTION with the following file attachments: .exe .docx .zip .RAR",
+    "infoText": "An attachment is a file within the email. Different file types are dangerous in different ways: .jpg or .pdf are safer than .exe and .docx .zip .RAR (these can contain executable code)"
+  },
+  {
+    "text": "Is it likely that they will ask for sensitive information if one clicks on the link?",
+    "answer": true,
+    "infoIfCorrect": "Your answer was correct! This e-mail indirectly contains a request to disclose sensitive information. This is clear from the context of the email: Bank details + link. It is to be expected that you should disclose sensitive information such as your online banking access data.",
+    "infoIfWrong": "Your answer was not correct. In this e-mail is indirectly the request to provide sensitive data. This is clear from the context of the email: Bank details + link. It is to be expected that you should disclose sensitive information such as your online banking access data.",
+    "infoText": "If the source cannot be clearly validated, never click on the link! The context in this example suggests that sensitive information is requested"
+  },
+  {
+    "text": "Is your bank's logo enough to verify the sender?",
+    "answer": false,
+    "infoIfCorrect": "Deine Antwort war richtig! Nur das Logo reicht definitiv nicht aus, das kann sich ja jeder aus dem Internet holen.",
+    "infoIfWrong": "Your answer was wrong. Only the logo is definitely not enough, anyone can get it from the internet",
+    "infoText": "The logo is definitely not enough to verify an email. Only the combination of context + trusted email address can be safe (but again: CAUTION)."
+  },
+  {
+    "text": "Are generic phrases used in this email?",
+    "answer": true,
+    "infoIfCorrect": "Your answer was correct! This email contains generic speech like 'Hello customer' or 'Good day' and are an indication of villainy!",
+    "infoIfWrong": "Your answer was not correct. This email contains generic speech like 'Hello customer' or 'Good day' and are an indication of villainy!",
+    "infoText": "Generic addresses often indicate that the sender has no information about you and sends a lot of these emails -> a definite alarm sign"
+  },
+  {
+    "text": "Does the email address look trustworthy?",
+    "answer": false,
+    "infoIfCorrect": "Your answer was correct! This email address is not trustworthy because it is not spelled correctly (Like sunglasses from 'RayBerry')",
+    "infoIfWrong": "Your answer was wrong! This email address is not trustworthy because it is not spelled correctly (Like sunglasses with 'RayBerry')",
+    "infoText": "The e-mail address is often the most important indicator of whether it is phishing or not. Spelling errors and/or many numbers and special characters in the e-mail address are critical. You can clearly identify an address via the e-mail header (contains the IP address that cannot be manipulated).How? Simply click on e-mail address or 'Show options' (depending on the e-mail program) Copy IP address and google - If the e-mail has already been classified as malicious, e.g. by the consumer advice center, you will find a hint on the Internet."
+  },
+  {
+    "text": "Does this email contain spelling errors?",
+    "answer": true,
+    "infoIfCorrect": "Your answer was correct! Spelling errors like here: 'Vielen Dnak' or 'mit freundlichen GreFen' can be a sign that e.g. a translation program was active: This is not a definite characteristic, but a hint",
+    "infoIfWrong": "Uiuiuiui, watch out young knight☹️ Your answer was wrong! Spelling errors like here: 'Vielen Dnak' or 'mit freundlichen GreFen' can be a sign that e.g. a translation program was active: This is not a definite characteristic, but a hint",
+    "infoText": "Spelling errors can be a sign that a translation program has been active: this is not a definite characteristic, but it is an indication"
+  },
+  {
+    "text": "Is the timing of an email relevant?",
+    "answer": true,
+    "infoIfCorrect": "Your answer was correct! The time of the e-mail is relevant. A phishing email at unusual times may indicate that this is not a valid email, especially in the context of the content.",
+    "infoIfWrong": "Aii Karamba☹️ Your answer was wrong! A phishing email at unusual times insebspecially in the context of the content may indicate that this is not a valid email.",
+    "infoText": "The time of the e-mail is relevant. A phishing email at unusual times may indicate that this is not a valid email, especially in the context of the content."
+  }
+]

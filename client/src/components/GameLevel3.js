@@ -11,25 +11,24 @@ const GameLevel3 = (props) => {
   const checkEmailIsPhishing = () => {
     if (index < 4) {
       if (allEmails[index].phishingYes) {
-        setPopUpText("correct");
+        setPopUpText(allEmails[index].infoIfTrue);
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1);
         setShowPopup(true);
       }  else  {
-        setPopUpText("false");
+        setPopUpText(allEmails[index].infoIfWrong);
         setIndex(index + 1);
         setShowPopup(true);
       }
     } else if(index === 4) {   
         if (allEmails[index].phishingYes) {
-        setPopUpText("correct + Game Over");
+        setPopUpText(allEmails[index].infoIfTrue + "Game Over");
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1);
         setShowPopup(true);
         console.log("Game Over")
       }  else  {
-        setPopUpText("false + Game Over");
-        props.setBtnUpload(false)
+        setPopUpText(allEmails[index].infoIfWrong + "Game over");
         setIndex(index + 1);
         setShowPopup(true);
       }
@@ -39,35 +38,31 @@ const GameLevel3 = (props) => {
   const checkEmailIsNotPhishing = () => {
     if (index < 4) {
       if (allEmails[index].phishingNot) {
-        setPopUpText("Correct");
+        setPopUpText(allEmails[index].infoIfTrue);
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1 );
         setShowPopup(true);
         
       }  else {
-        setPopUpText("False");
+        setPopUpText(allEmails[index].infoIfWrong + "Game over");
         setIndex(index + 1);
         setShowPopup(true);
       }
      
     } else if(index === 4) {   
         if (allEmails[index].phishingNot) {
-        setPopUpText("correct + Game Over");
+          setPopUpText(allEmails[index].infoIfTrue + "Game Over");
         props.setBtnUpload(false)
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1);
         setShowPopup(true);
         console.log("Game Over")
       }  else  {
-        setPopUpText("false + Game Over");
+        setPopUpText(allEmails[index].infoIfWrong + "Game Over");
         setIndex(index + 1);
         setShowPopup(true);
       }
     }
-  };
-
-  const checkJoker = () => {
-    console.log("joker!");
   };
 
   const closePopup = () => {
@@ -83,7 +78,6 @@ const GameLevel3 = (props) => {
       <img src={allEmails[index].pictureURL} alt="emails"></img>
       <button onClick={checkEmailIsPhishing}>Phishing</button>
       <button onClick={checkEmailIsNotPhishing}>Not Phishing</button>
-      <button onClick={checkJoker}>Joker</button>
     </div>
   );
 };

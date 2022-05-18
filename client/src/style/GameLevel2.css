@@ -3,4 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: url("./aim.png"), pointer;
+    background-image: url("./landscape.png");
 }

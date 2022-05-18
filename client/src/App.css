@@ -13,8 +13,8 @@ color: white;
 }
 
  .pictureHomePage{
-  width: 5em;
-  height: 6em;
+  width: 8em;
+  height: 10em;
   background-image: url("./style/castle1.png");
   background-size: cover;
 }
@@ -44,6 +44,12 @@ color: white;
   justify-content:center;
   align-items:center;
   width: 80vw;
+}
+
+.container-right p{
+  font-size: 16px;
+  padding: 0em 10em 1em 10em;
+  margin-top: -1.0em;
 }
 
 

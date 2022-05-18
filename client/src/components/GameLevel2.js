@@ -10,10 +10,15 @@ const GameLevel2 = (props) => {
   let x2 = 500;
   let y2 = 40;
 
+
+  let x3 = 250;
+  let y3 = 200;
+
   let indexA = 0;
   let indexB = 1;
   let index = 0;
   let points = 0;
+
 
   const [showPopup, setShowPopup] = useState(false);
   const [startBtn, setStartBtn] = useState(false);
@@ -26,7 +31,6 @@ const GameLevel2 = (props) => {
     [allOptions[3].option1, allOptions[3].option2],
     [allOptions[4].option1, allOptions[4].option2],
   ];
-
 
 
   let display = [];
@@ -50,17 +54,24 @@ const GameLevel2 = (props) => {
 
     display[8] = p5.loadImage(pictures[4][0]);
     display[9] = p5.loadImage(pictures[4][1]);
+
+
   };
 
   const draw = (p5) => {
-    p5.background(100);
+    p5.clear();
 
     p5.image(display[indexA], x1, y1);
     p5.image(display[indexB], x2, y2);
+
     p5.noFill();
     p5.strokeWeight(0);
     p5.rect(x2, y2, 300, 100);
     p5.rect(x1, y1, 300, 100);
+    p5.line(x3, y3, 300, 100);
+
+
+  
 
     // NOTE: Do not use setState in the draw function or in functions that are executed
     // in the draw function...
@@ -92,17 +103,17 @@ const GameLevel2 = (props) => {
     let dOption2 = _p5.dist(x2, y2, _p5.mouseX, _p5.mouseY);
 
     if (index <= 3) {
-      if (dOption1 < 100 && allOptions[index].correctOption === "option1") {
+      if (dOption1 < 50 && allOptions[index].correctOption === "option1") {
         points++
         console.log(points)
-      } else if ( dOption1 < 100 && allOptions[index].correctOption !== "option1" ) {
+      } else if ( dOption1 < 50 && allOptions[index].correctOption !== "option1" ) {
        // console.log("option1 is not correct");
        console.log(points)
-      } else if (dOption2 < 100 &&  allOptions[index].correctOption === "option2" ) {
+      } else if (dOption2 < 50 &&  allOptions[index].correctOption === "option2" ) {
         points++
         console.log(points)
       } else if (
-        dOption2 < 100 &&
+        dOption2 < 50 &&
         allOptions[index].correctOption !== "option2"
       ) {
        // console.log("option2 is not correct");
@@ -130,9 +141,6 @@ const GameLevel2 = (props) => {
   const closePopup = () => {
     setShowPopup(false);
   };
-
-
- 
 
 
   return (
