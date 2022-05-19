@@ -1,11 +1,19 @@
+import "../style/Level3.css";
+
 
 const  Level3Popup = (props) => {
 
-
+  const closePopup = () => {
+    props.setShowPopup(false);
+  };
+  
 
     return (
-      <div>
+      <div className="popUpLevel3-container">
+       <div className="level3Popup">
+       <button onClick={closePopup}>X</button>
      <p>{props.text}</p>
+      </div>
       </div>
     );
   }

@@ -36,13 +36,11 @@ export default function Signup() {
   const handlePassword = (e) => setPassword(e.target.value);
 
 
-  const style = {
-	 " textDecoration": "none"
-  }
-
   return (
     <div className="authentication">
-   <Link to='/ '>Back</Link>
+    <div className="link-container"> <Link  className="goBackBtn" to='/ '>Back</Link>
+    </div>
+  
       <div className="container-data">
         <h1>Signup</h1>
 	
@@ -62,7 +60,7 @@ export default function Signup() {
         {errorMessage && <h5>{errorMessage}</h5>}
 
         <h3>Already have an account?</h3>
-        <Link style={style} to="/login">Login</Link>
+        <Link className="login" to="/login">Login</Link>
       </div>
     </div>
   );

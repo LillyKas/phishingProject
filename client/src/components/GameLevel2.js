@@ -10,7 +10,6 @@ const GameLevel2 = (props) => {
   let x2 = 500;
   let y2 = 40;
 
-
   let x3 = 250;
   let y3 = 200;
 
@@ -19,10 +18,10 @@ const GameLevel2 = (props) => {
   let index = 0;
   let points = 0;
 
-
   const [showPopup, setShowPopup] = useState(false);
   const [startBtn, setStartBtn] = useState(false);
   const [showStart, setShowStart] = useState(true);
+  const [showTask, setShowTask] = useState(false);
 
   let pictures = [
     [allOptions[0].option1, allOptions[0].option2],
@@ -31,7 +30,6 @@ const GameLevel2 = (props) => {
     [allOptions[3].option1, allOptions[3].option2],
     [allOptions[4].option1, allOptions[4].option2],
   ];
-
 
   let display = [];
 
@@ -54,8 +52,6 @@ const GameLevel2 = (props) => {
 
     display[8] = p5.loadImage(pictures[4][0]);
     display[9] = p5.loadImage(pictures[4][1]);
-
-
   };
 
   const draw = (p5) => {
@@ -70,13 +66,10 @@ const GameLevel2 = (props) => {
     p5.rect(x1, y1, 300, 100);
     p5.line(x3, y3, 300, 100);
 
-
-  
-
     // NOTE: Do not use setState in the draw function or in functions that are executed
     // in the draw function...
     // please use normal variables or class properties for these purpose
- 
+
     if (y1 < 500 && y2 < 500) {
       y1++;
       y2++;
@@ -89,14 +82,15 @@ const GameLevel2 = (props) => {
       indexB += 2;
     } else if (indexA === 8 && indexB === 9) {
       setShowPopup(true);
-      props.setBtnUpload(false)
-    } 
+      props.setBtnUpload(false);
+      props.setShowBtn(true);
+    }
   };
 
   const startGame = () => {
-    setStartBtn(true)
-    setShowStart(false)
-  }
+    setStartBtn(true);
+    setShowStart(false);
+  };
 
   const mousePressed = (_p5, event) => {
     let dOption1 = _p5.dist(x1, y1, _p5.mouseX, _p5.mouseY);
@@ -104,56 +98,78 @@ const GameLevel2 = (props) => {
 
     if (index <= 3) {
       if (dOption1 < 50 && allOptions[index].correctOption === "option1") {
-        points++
-        console.log(points)
-      } else if ( dOption1 < 50 && allOptions[index].correctOption !== "option1" ) {
-       // console.log("option1 is not correct");
-       console.log(points)
-      } else if (dOption2 < 50 &&  allOptions[index].correctOption === "option2" ) {
-        points++
-        console.log(points)
+        points++;
+        console.log(points);
+      } else if (
+        dOption1 < 50 &&
+        allOptions[index].correctOption !== "option1"
+      ) {
+        // console.log("option1 is not correct");
+        console.log(points);
+      } else if (
+        dOption2 < 50 &&
+        allOptions[index].correctOption === "option2"
+      ) {
+        points++;
+        console.log(points);
       } else if (
         dOption2 < 50 &&
         allOptions[index].correctOption !== "option2"
       ) {
-       // console.log("option2 is not correct");
-       console.log(points)
+        // console.log("option2 is not correct");
+        console.log(points);
       }
     } else {
       console.log("game finished");
       index = 0;
       setShowPopup(true);
-      props.setBtnUpload(false)
-      props.setPoints(points)
+      props.setBtnUpload(false);
+      props.setShowBtn(true);
+      props.setPoints(points);
     }
 
     y1 = 50;
     y2 = 50;
     x1 = Math.floor(Math.random() * 2) * 100;
-    x2 = (Math.floor(Math.random() * 4) * 100) + 200;
+    x2 = Math.floor(Math.random() * 4) * 100 + 200;
 
     index++;
     indexA += 2;
     indexB += 2;
-   
   };
 
   const closePopup = () => {
     setShowPopup(false);
   };
 
-
   return (
     <div>
-      {showPopup && <Level2Popup state={showPopup} />}
-      {showPopup && <button onClick={closePopup}>Close</button>}
-      {showStart &&   <button onClick={startGame}>StartGame</button>}
-      <div className="canvas">
-    {startBtn &&  
-        <Sketch setup={setup} draw={draw} mousePressed={mousePressed} />
-    }
+      <div className="task-container">
+        {showStart && (
+          <p className="task">
+            {" "}
+            You have now successfully got to know your enemies' arsenal of
+            weapons and... WHAT IS THAT NOISE?! A deep rumbling sounds: the
+            castle is being attacked by vile Trojan dragons! There will always
+            be two dragons flying at your castle from above. There are words on
+            both dragons. Click on the dragon whose term seems more dangerous to
+            you, if it appears in an e-mail.
+          </p>
+        )}
+        {showStart && (
+          <button className="startBtn" onClick={startGame}>
+            Start the Game
+          </button>
+        )}
       </div>
-     
+      {showPopup && (
+        <Level2Popup state={showPopup} setShowPopup={setShowPopup} />
+      )}
+      <div className="canvas">
+        {startBtn && (
+          <Sketch setup={setup} draw={draw} mousePressed={mousePressed} />
+        )}
+      </div>
     </div>
   );
 };

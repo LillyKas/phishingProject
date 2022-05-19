@@ -3,6 +3,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/auth";
 import { useParams, useNavigate } from "react-router-dom";
+import "../style/Level3.css";
 
 
 function Level3() {
@@ -11,6 +12,7 @@ function Level3() {
   const [pointsLevel3, setpointsLevel3] = useState(0);
   const [pointsTotal, setpointsTotal] = useState(0);
   const [buttonUpload, setBtnUpload] = useState(true)
+  const [showBtn, setShowBtn] = useState(false);
 
   const { user, verifyStoredToken } = useContext(AuthContext);
   const token = localStorage.authToken;
@@ -53,10 +55,9 @@ function Level3() {
 
 
   return (
-    <div>
-    <h1>Levels 3 Points: {pointsLevel3}</h1>
-    <button onClick={update} disabled={buttonUpload}>Go on!</button>
-      <GameLevel3 pointsLevel3={pointsLevel3} setPoints={setpointsLevel3} setBtnUpload={setBtnUpload}  />
+    <div className="container-level3">
+          {showBtn && <button  className="updateBtnLevel3" onClick={update} disabled={buttonUpload}>Go on!</button>}
+      <GameLevel3 pointsLevel3={pointsLevel3} setPoints={setpointsLevel3} setBtnUpload={setBtnUpload} setShowBtn={setShowBtn}   />
     </div>
   );
 }

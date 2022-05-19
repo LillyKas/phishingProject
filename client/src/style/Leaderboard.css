@@ -1,0 +1,49 @@
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("./landscape.png");
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  th{
+    font-style: bold;
+    font-weight: 900;
+    font-size: 22px;
+      padding: 0.5em 0.5em 0.5em 0.5em;
+
+  }
+  
+  td{
+      text-align: center;
+      padding: 1em;
+      font-size: 18px;
+      font-weight: 600;
+      font-style: italic;
+  }
+
+
+
+  table{
+      margin-top: 5em;
+      background-color: #3b077a34;
+      padding: 1em;
+      width: 25vw;
+      height: 45vh;
+      border-radius: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      color: white;
+      font-style: normal;
+      font-weight: 800;
+      font-family: "Poppins", sans-serif;
+      margin: 2em 0em 2em 0em;
+      backdrop-filter: blur(6px);
+      border-style: solid;
+  }

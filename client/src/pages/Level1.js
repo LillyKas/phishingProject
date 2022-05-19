@@ -17,6 +17,7 @@ function Level1() {
   const [popUpText, setPopUpText] = useState("");
 
   const [showPopup, setShowPopup] = useState(false);
+  const [showBtn, setShowBtn] = useState(false);
 
   const { user, verifyStoredToken } = useContext(AuthContext);
   const token = localStorage.authToken;
@@ -31,6 +32,7 @@ function Level1() {
       setTaskCount(countTask);
       setbuttonAnswer(true);
       setBtnUpload(false);
+      setShowBtn(true)
     }
 
     setPopUpText("");
@@ -51,6 +53,7 @@ function Level1() {
       setTaskCount(countTask);
       setbuttonAnswer(true);
       setBtnUpload(false);
+      setShowBtn(true)
     }
     setPopUpText("");
     if (!task[countTask].answer) {
@@ -92,11 +95,15 @@ function Level1() {
   return (
     <div>
       <div className="container-level1">
+      {showBtn && <button className="updateBtn" onClick={update} disabled={buttonUpload}>
+          Go on!
+        </button> }
         <h2 className="taskLevel1">{task[countTask].text}</h2>
         <button className="moreInfoBtn" onClick={clickInfo}>More Info</button>
        <div className="picturePoints">
+    
         <div className="pictureLevel1"></div>
-        <h2>⚡{pointsLevel1}</h2>
+
         </div>
         {showPopup && (
           <Level1Popup
@@ -111,9 +118,6 @@ function Level1() {
         </button>
         <button className="answerBtn" onClick={clickNo} disabled={buttonAnswer}>
           No
-        </button>
-        <button onClick={update} disabled={buttonUpload}>
-          Go on!
         </button>
         </div>
       </div>

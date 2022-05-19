@@ -42,6 +42,8 @@ export default function Login() {
 
 	return (
 		<div className="authentication">
+		  <div className="link-container"> <Link  className="goBackBtn" to='/ '>Back</Link>
+    </div>
 				<div className="container-data">
 			<h1>Login</h1>
 	
@@ -59,7 +61,7 @@ export default function Login() {
 			{errorMessage && <h5>{errorMessage}</h5>}
 
 			<h3>Don't have an account?</h3>
-			<Link to='/signup'>Signup</Link>
+			<Link className="login" to='/signup'>Signup</Link>
 			
 			</div>
 	</div>

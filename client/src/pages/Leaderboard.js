@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect} from "react";
 import axios from "axios";
-import { AuthContext } from "../context/auth";
-import { useParams, useNavigate } from "react-router-dom";
+import "../style/Leaderboard.css";
+import { Link } from "react-router-dom";
 
 function Leaderboard() {
   const token = localStorage.authToken;
 
   const [users, setUser] = useState([]);
+ 
 
   const getAllUser = () => {
     axios
@@ -26,8 +27,7 @@ function Leaderboard() {
   const userList = users.sort((a, b) => b.pointsTotal - a.pointsTotal);
 
   return (
-    <div>
-      <h1>Leaderboard</h1>
+    <div className="leaderboard-container">
       <table>
         <thead>
           <tr>
@@ -44,6 +44,10 @@ function Leaderboard() {
           ))}
         </tbody>
       </table>
+
+      <Link className="linkStartBtn" to="/game">
+            Back to the start
+          </Link>
     </div>
   );
 }

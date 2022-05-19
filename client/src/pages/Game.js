@@ -1,16 +1,28 @@
 import "../style/Start.css";
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth";
 import "../style/Game.css";
 
 function Game() {
   const { user, logoutUser } = useContext(AuthContext);
 
+  let navigate = useNavigate();
+
+  const gotoLevel1 = () => {
+    navigate("/game/level1")
+  }
+  const gotoLevel2 = () => {
+    navigate("/game/level2")
+  }
+  const gotoLevel3 = () => {
+    navigate("/game/level3")
+  }
+
   return (
     <div className="background">
       <div className="container">
-        <div className="card">
+        <div className="card" onClick={gotoLevel1}>
           <h2>What to expect in Level 1</h2>
           <p>
             This game is about getting to know your enemies' arsenal of weapons.
@@ -20,8 +32,8 @@ function Game() {
           </p>
         </div>
 
-        <div className="card">
-          <h2>What to expect in Level 2</h2>
+        <div className="card" onClick={gotoLevel2}>
+          <h2>What to expect in Level 2 </h2>
           <p>
             You have now successfully got to know your enemies' arsenal of
             weapons and... WHAT IS THAT NOISE?! A deep rumbling sounds: the
@@ -32,7 +44,7 @@ function Game() {
           </p>
         </div>
 
-        <div className="card">
+        <div className="card" onClick={gotoLevel3}>
           <h2> What to expect in Level 3</h2>
           <p>
             Some dragons hid malicious code in the mail during the attack! Take
@@ -43,7 +55,7 @@ function Game() {
       </div>
       <div className="startBtnContainer">
       <Link className="linkStartBtn" to="/game/level1">
-            Start
+            Start with Level 1
           </Link>
 
           </div>

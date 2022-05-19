@@ -3,11 +3,13 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { AuthContext } from "../context/auth";
 import { useParams, useNavigate } from "react-router-dom";
+import "../style/Level2.css";
 
 function Level2() {
   const [pointsLevel2, setpointsLevel2] = useState(0);
   const [pointsTotal, setpointsTotal] = useState(0);
   const [buttonUpload, setBtnUpload] = useState(true)
+  const [showBtn, setShowBtn] = useState(false);
 
   const { user, verifyStoredToken } = useContext(AuthContext);
   const token = localStorage.authToken;
@@ -52,10 +54,11 @@ function Level2() {
       .catch((err) => console.log(err.response.data));
   };
   return (
-    <div>
-      <h1>Levels 2 Points: {pointsLevel2}</h1>
-      <button onClick={update} disabled={buttonUpload}>Go on!</button>
-      <GameLevel2 pointsLevel2={pointsLevel2} setPoints={setpointsLevel2} setBtnUpload={setBtnUpload} />
+    <div className="container-level2">
+      <GameLevel2 pointsLevel2={pointsLevel2} setPoints={setpointsLevel2} setBtnUpload={setBtnUpload} setShowBtn={setShowBtn} />
+      {showBtn && <button className="updateBtn" onClick={update} disabled={buttonUpload}>
+          Go on!
+        </button> }
     </div>
   );
 }

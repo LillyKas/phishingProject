@@ -21,20 +21,19 @@
     background-image: url("./level1-email.png");
     background-size: cover;
     border-radius: 1em;
-    margin: 0em 0em 0em 10em;
-    margin-top: -10%;
+    margin-top: -15%;
 } 
 
 .taskLevel1{
     padding: 0.5em 4em 0.5em 4em;
     background-color: #3b077a34 ;
     backdrop-filter: blur(6px);
-    margin-top: -5%;
+    margin-top: -8%;
 }
 
 .level1Popup{
     padding: 2em;
-    background-color: #d48ce6;;
+    background-color: #FFE458;
     width: 40vw;
     border-radius: 1em;
     position: fixed;
@@ -79,7 +78,7 @@
     font-weight: 800;
     border-style: none;
     border-radius: 1em;
-   margin-top: -9%;
+   margin-top: -10%;
 }
 
 .picturePoints{
@@ -93,3 +92,42 @@
   font-size: 36px;
 }
 
+.updateBtn{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0.5em 5em 0.5em 5em;
+    margin-top: -8%;
+   
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+  }
+  @-webkit-keyframes glowing {
+    0% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+    50% { background-color: #cf72e7; -webkit-box-shadow: 0 0 40px #cf72e7; }
+    100% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+  }
+  
+  @-moz-keyframes glowing {
+    0% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+    50% { background-color: #d48ce6; -webkit-box-shadow: 0 0 40px #d48ce6; }
+    100% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+  }
+  
+  @-o-keyframes glowing {
+    0% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+    50% { background-color: #d48ce6; -webkit-box-shadow: 0 0 40px #d48ce6; }
+    100% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+  }
+  
+  @keyframes glowing {
+    0% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+    50% { background-color: #d48ce6; -webkit-box-shadow: 0 0 40px #d48ce6; }
+    100% { background-color: #cf59ec; -webkit-box-shadow: 0 0 3px #cf59ec; }
+  }

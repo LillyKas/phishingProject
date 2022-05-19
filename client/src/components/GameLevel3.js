@@ -7,7 +7,7 @@ const GameLevel3 = (props) => {
   const [showPopup, setShowPopup] = useState(false);
   const [popUpText, setPopUpText] = useState("");
 
-
+console.log(props)
   const checkEmailIsPhishing = () => {
     if (index < 4) {
       if (allEmails[index].phishingYes) {
@@ -15,10 +15,12 @@ const GameLevel3 = (props) => {
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1);
         setShowPopup(true);
+       
       }  else  {
         setPopUpText(allEmails[index].infoIfWrong);
         setIndex(index + 1);
         setShowPopup(true);
+        
       }
     } else if(index === 4) {   
         if (allEmails[index].phishingYes) {
@@ -26,11 +28,14 @@ const GameLevel3 = (props) => {
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1);
         setShowPopup(true);
-        console.log("Game Over")
+        props.setBtnUpload(false)
+        props.setShowBtn(true);
       }  else  {
         setPopUpText(allEmails[index].infoIfWrong + "Game over");
         setIndex(index + 1);
         setShowPopup(true);
+        props.setBtnUpload(false)
+        props.setShowBtn(true);
       }
     }
   };
@@ -42,42 +47,48 @@ const GameLevel3 = (props) => {
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1 );
         setShowPopup(true);
+      
         
       }  else {
         setPopUpText(allEmails[index].infoIfWrong + "Game over");
         setIndex(index + 1);
         setShowPopup(true);
+       
       }
      
     } else if(index === 4) {   
         if (allEmails[index].phishingNot) {
           setPopUpText(allEmails[index].infoIfTrue + "Game Over");
         props.setBtnUpload(false)
+        props.setShowBtn(true);
         setIndex(index + 1);
         props.setPoints(props.pointsLevel3 + 1);
+        props.setBtnUpload(false)
+        props.setShowBtn(true);
         setShowPopup(true);
         console.log("Game Over")
       }  else  {
         setPopUpText(allEmails[index].infoIfWrong + "Game Over");
         setIndex(index + 1);
         setShowPopup(true);
+        props.setBtnUpload(false)
+        props.setShowBtn(true);
       }
     }
   };
-
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+;
 
   return (
     <div>
-      {showPopup && <Level3PopupCorrect state={showPopup} text={popUpText} />}
-      {showPopup && <button onClick={closePopup}>Close</button>}
+      {showPopup && <Level3PopupCorrect state={showPopup} text={popUpText} setShowPopup={setShowPopup}  />}
 
-      <h1>This is Game Level 3 Component</h1>
+      <div className="level3-container-game-component">
       <img src={allEmails[index].pictureURL} alt="emails"></img>
-      <button onClick={checkEmailIsPhishing}>Phishing</button>
-      <button onClick={checkEmailIsNotPhishing}>Not Phishing</button>
+      <div>
+      <button className="answerBtnLevel3" onClick={checkEmailIsPhishing}>Phishing</button>
+      <button className="answerBtnLevel3" onClick={checkEmailIsNotPhishing}>Not Phishing</button>
+      </div>
+      </div>
     </div>
   );
 };
