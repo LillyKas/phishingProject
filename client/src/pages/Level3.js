@@ -39,7 +39,7 @@ function Level3() {
    
     const requestBody = { pointsLevel3, pointsTotal:total };
     axios
-      .put(`http://localhost:5005/api/game/level3/${id}`, requestBody, {
+      .put(`/api/game/level3/${id}`, requestBody, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
