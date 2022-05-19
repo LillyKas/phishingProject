@@ -78,7 +78,7 @@ function Level1() {
   const update = () => {
     const requestBody = { pointsLevel1, pointsTotal: pointsLevel1 };
     axios
-      .put(`http://localhost:5005/api/game/${id}`, requestBody, {
+      .put(`/api/game/${id}`, requestBody, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -38,7 +38,7 @@ export default function Signup() {
 
   return (
     <div className="authentication">
-    <div className="link-container"> <Link  className="goBackBtn" to='/ '>Back</Link>
+    <div className="link-containerAuth"> <Link  className="goBackBtn" to='/ '>Back</Link>
     </div>
   
       <div className="container-data">
