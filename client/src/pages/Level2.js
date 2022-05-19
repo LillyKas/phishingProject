@@ -20,7 +20,7 @@ function Level2() {
   
 
   const getUser = () => {
-		axios.get(`http://localhost:5005/api/game/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+		axios.get(`/api/game/${id}`, { headers: { Authorization: `Bearer ${token}` } })
 			.then(user => {
    
         setpointsTotal(user.data.pointsTotal)

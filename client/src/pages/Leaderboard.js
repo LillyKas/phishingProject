@@ -11,7 +11,7 @@ function Leaderboard() {
 
   const getAllUser = () => {
     axios
-      .get(`http://localhost:5005/api/game/leaderboard`, {
+      .get(`/api/game/leaderboard`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((users) => {

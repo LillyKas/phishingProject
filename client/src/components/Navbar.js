@@ -36,7 +36,7 @@ const Navbar = (props) => {
 
 
   const getUser = () => {
-		axios.get(`http://localhost:5005/api/game/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+		axios.get(`/api/game/${id}`, { headers: { Authorization: `Bearer ${token}` } })
 			.then(user => {
         setPoints(user.data.pointsTotal)
 			})
