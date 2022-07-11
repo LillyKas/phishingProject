@@ -7,7 +7,7 @@ import "../style/Navbar.css";
 
 const Navbar = (props) => {
   const { user, logoutUser } = useContext(AuthContext);
-  const [points, setPoints] = useState(0);
+  const [points, setPoints] = useState(100);
   const token = localStorage.authToken;
   const id = user._id;
   let navigate = useNavigate();
@@ -39,6 +39,7 @@ const Navbar = (props) => {
 		axios.get(`/api/game/${id}`, { headers: { Authorization: `Bearer ${token}` } })
 			.then(user => {
         setPoints(user.data.pointsTotal)
+        console.log(points)
 			})
 			.catch(err => console.log(err))
 	}
@@ -56,7 +57,7 @@ const Navbar = (props) => {
         <button className="backBtn" onClick={() => goback()}>go back</button>
         <h1 onClick={toHomePage}>{header}</h1>
         <div className="userInfoNav">
-        <p> Hey, {user?.name} 🦄</p>
+        <p> Hey Winner, {user?.name} 🦄</p>
         <p className="pointsDisplay"> Your points: &nbsp; {points}</p>
         <button className="logoutBtn" onClick={logoutUser}>logout</button>
         </div>

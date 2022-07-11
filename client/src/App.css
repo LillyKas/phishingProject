@@ -19,8 +19,8 @@ color: white;
   background-size: cover;
 }
 .pictureHomePageKnight{
-  width: 3em;
-  height: 4em;
+  width: 4em;
+  height: 5em;
   margin: -2em 3em 0em 0em;
   background-image: url("./style/knight.gif");
   background-size: cover;
@@ -72,6 +72,7 @@ font-weight: bold;
 font-size: 1.2rem;
 text-align: center;
 }
+
 
 
 
